@@ -6,14 +6,14 @@ import { AppComponent } from './app.component';
 import { MdCardModule } from '@angular2-material/card';
 import { MdButtonModule } from '@angular2-material/button';
 import {MdIconModule} from '@angular2-material/icon';
-
+import { MdCheckboxModule} from '@angular/material';
 import {MdIconRegistry } from '@angular2-material/icon';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,MdCardModule,MdButtonModule,MdIconModule
+    BrowserModule,MdCardModule,MdButtonModule,MdIconModule,MdCheckboxModule
   ],
   providers: [MdIconRegistry],
   bootstrap: [AppComponent]
