@@ -12,13 +12,12 @@ li {
   float: left;
 }
 
-li a {
+li a{
   display: block;
   color: white;
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
 }
-
 
 

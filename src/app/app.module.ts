@@ -5,14 +5,16 @@ import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule
-,MatTooltipModule} from "@angular/material";
+,MatTooltipModule,MatSlideToggleModule,MatCardModule,MatGridListModule} from "@angular/material";
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,HttpModule,
@@ -23,7 +25,10 @@ import {MatIconModule} from '@angular/material';
     MdIconModule,
     MatIconModule,
     MatMenuModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSlideToggleModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
