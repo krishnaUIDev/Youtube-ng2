@@ -1,0 +1,64 @@
+<ul>
+  <li><a href="#"><md-icon>menu</md-icon></a> </li>
+  <li><a href="#icon"><button md-raised-button color="warn"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+    Youtube</button></a></li>
+  <li><a href="#news">News</a></li>
+  <li style="float:right"> <a href="#"><button md-raised-button color="warn">SIGN IN</button></a></li>
+  <li style="float:right">
+     <a href="#">
+        <button md-icon-button [mdMenuTriggerFor]="menu">
+          <md-icon>more_vert</md-icon>
+        </button>
+        <md-menu #menu="mdMenu">
+          <button md-menu-item>
+            <md-icon><i class="fa fa-moon-o" aria-hidden="true"></i></md-icon>
+            <span>Dark Theme</span>
+          </button>
+          <button md-menu-item disabled>
+            <md-icon><i class="fa fa-cog" aria-hidden="true"></i></md-icon>
+            <span>Settings</span>
+          </button>
+          <button md-menu-item>
+            <md-icon><i class="fa fa-info-circle" aria-hidden="true"></i></md-icon>
+            <span>Help</span>
+          </button>
+          <button md-menu-item>
+            <md-icon><i class="fa fa-commenting-o" aria-hidden="true"></i></md-icon>
+            <span>Feedback</span>
+          </button>
+        </md-menu>
+     </a>
+  </li>
+  <li style="float:right">
+    <a href="#">
+      <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>apps</md-icon></button>
+      <md-menu #appMenu="mdMenu">
+        <button md-menu-item>
+          <md-icon><i class="fa fa-television" aria-hidden="true"></i></md-icon>
+          <span>YouTube TV</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-gamepad" aria-hidden="true"></i></md-icon>
+          <span>YouTube Gaming</span>
+        </button>
+        <hr/>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-music" aria-hidden="true"></i></md-icon>
+          <span>YouTube Music</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-male" aria-hidden="true"></i></md-icon>
+          <span>YouTube Kids</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-graduation-cap" aria-hidden="true"></i></md-icon>
+          <span>YouTube Acadamy</span>
+        </button>
+      </md-menu>
+    </a>
+  </li>
+  <li style="float: right"><a href="#"><md-icon><i class="fa fa-cloud-upload" aria-hidden="true"></i></md-icon></a>
+  </li>
+
+</ul>
+

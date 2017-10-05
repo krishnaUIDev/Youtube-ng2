@@ -4,15 +4,18 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule} from "@angular/material";
+import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule} from "@angular/material";
+import { NavbarComponent } from './navbar/navbar.component';
+import {MatIconModule} from '@angular/material';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,HttpModule,
-    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule
+    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatIconModule,MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
