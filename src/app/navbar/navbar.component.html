@@ -1,37 +1,55 @@
 <ul>
   <li><a href="#"><md-icon>menu</md-icon></a> </li>
-  <li><a href="#icon"><button md-raised-button color="warn"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+  <li><a href="#icon"><button md-raised-button color="warn" mdTooltip="YouTube Home"><i class="fa fa-youtube-play" aria-hidden="true"></i>
     Youtube</button></a></li>
   <li><a href="#news">News</a></li>
   <li style="float:right"> <a href="#"><button md-raised-button color="warn">SIGN IN</button></a></li>
   <li style="float:right">
      <a href="#">
-        <button md-icon-button [mdMenuTriggerFor]="menu">
-          <md-icon>more_vert</md-icon>
-        </button>
-        <md-menu #menu="mdMenu">
-          <button md-menu-item>
-            <md-icon><i class="fa fa-moon-o" aria-hidden="true"></i></md-icon>
-            <span>Dark Theme</span>
-          </button>
-          <button md-menu-item disabled>
-            <md-icon><i class="fa fa-cog" aria-hidden="true"></i></md-icon>
-            <span>Settings</span>
-          </button>
-          <button md-menu-item>
-            <md-icon><i class="fa fa-info-circle" aria-hidden="true"></i></md-icon>
-            <span>Help</span>
-          </button>
-          <button md-menu-item>
-            <md-icon><i class="fa fa-commenting-o" aria-hidden="true"></i></md-icon>
-            <span>Feedback</span>
-          </button>
-        </md-menu>
+       <button md-icon-button [mdMenuTriggerFor]="menu">
+         <md-icon mdTooltip="Settings">more_vert</md-icon>
+       </button>
+       <md-menu #menu="mdMenu">
+         <button md-menu-item [mdMenuTriggerFor]="DarkTheme">
+           <md-icon><i class="fa fa-moon-o" aria-hidden="true"></i></md-icon>
+           <span>Dark Theme</span>
+         </button>
+
+         <button md-menu-item>
+           <md-icon><i class="fa fa-cog" aria-hidden="true"></i></md-icon>
+           <span>Settings</span>
+         </button>
+         <button md-menu-item>
+           <md-icon><i class="fa fa-info-circle" aria-hidden="true"></i></md-icon>
+           <span>Help</span>
+         </button>
+         <button md-menu-item>
+           <md-icon><i class="fa fa-commenting-o" aria-hidden="true"></i></md-icon>
+           <span>Feedback</span>
+         </button>
+         <hr/>
+         <button md-menu-item [mdMenuTriggerFor]="Language">Language</button>
+         <button md-menu-item [mdMenuTriggerFor]="Content">Content Location</button>
+         <button md-menu-item [mdMenuTriggerFor]="Restrict">Restrict Mode</button>
+         <button md-menu-item>Restore Old Youtube</button>
+       </md-menu>
+       <md-menu #DarkTheme="mdMenu">
+         <span md-menu-item>Dark Theme</span>
+       </md-menu>
+       <md-menu #Language="mdMenu">
+         <button md-menu-item>Choose you Language</button>
+       </md-menu>
+       <md-menu #Content="mdMenu">
+         <button md-menu-item>Choose location</button>
+       </md-menu>
+       <md-menu #Restrict="mdMenu">
+         <button md-menu-item>Restrict mode</button>
+       </md-menu>
      </a>
   </li>
   <li style="float:right">
     <a href="#">
-      <button md-button [mdMenuTriggerFor]="appMenu"><md-icon>apps</md-icon></button>
+      <button md-button [mdMenuTriggerFor]="appMenu"><md-icon mdTooltip="YouTube Apps">apps</md-icon></button>
       <md-menu #appMenu="mdMenu">
         <button md-menu-item>
           <md-icon><i class="fa fa-television" aria-hidden="true"></i></md-icon>
@@ -57,8 +75,7 @@
       </md-menu>
     </a>
   </li>
-  <li style="float: right"><a href="#"><md-icon><i class="fa fa-cloud-upload" aria-hidden="true"></i></md-icon></a>
+  <li style="float: right">
+    <a href="#"><md-icon mdTooltip="Upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i></md-icon></a>
   </li>
-
 </ul>
-

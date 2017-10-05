@@ -4,7 +4,8 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule} from "@angular/material";
+import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule
+,MatTooltipModule} from "@angular/material";
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material';
 
@@ -15,7 +16,14 @@ import {MatIconModule} from '@angular/material';
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,HttpModule,
-    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatIconModule,MatMenuModule
+    MdButtonModule,
+    MdCardModule,
+    MdMenuModule,
+    MdToolbarModule,
+    MdIconModule,
+    MatIconModule,
+    MatMenuModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
