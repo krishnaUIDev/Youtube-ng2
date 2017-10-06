@@ -8,11 +8,7 @@ import 'rxjs/add/operator/map'
 })
 export class AppComponent {
 
-   myData: Array<any>;
+   constructor(){
 
-   constructor(private http:Http){
-     this.http.get('https://jsonplaceholder.typicode.com/photos')
-     .map(response => response.json())
-       .subscribe(res => this.myData = res);
    }
 }

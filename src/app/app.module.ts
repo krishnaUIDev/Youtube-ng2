@@ -9,12 +9,14 @@ import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModul
 import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
+import { SearchPipe } from './search.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,BrowserAnimationsModule,HttpModule,

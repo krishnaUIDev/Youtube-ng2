@@ -27,9 +27,9 @@
 </md-grid-list>
 -->
 <!--Card-->
-<div class="container-fluid" *ngFor="let numbers of list;">
+<div class="container-fluid" *ngFor="let numbers of myList; let i=index" >
   <div class="row">
-    <div class="col-sm-3"><md-card class="example-card">
+    <div class="col-md-4"><md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image"></div>
         <md-card-title>{{numbers.title}}</md-card-title>
