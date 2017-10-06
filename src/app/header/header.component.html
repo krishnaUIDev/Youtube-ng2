@@ -1,41 +1,13 @@
-<!--
-<md-grid-list cols="4" rowHeight="0.58:1">
-  <md-grid-tile>
-        <md-card class="example-card">
-          <md-card-header>
-            <div md-card-avatar class="example-header-image"></div>
-            <md-card-title>{{title}}</md-card-title>
-            <md-card-subtitle>{{subtitle}}</md-card-subtitle>
-          </md-card-header>
-           <img md-card-image src="../../assets/Images/surya.jpg">
-          <md-card-content>
-            <p>
-              {{para}}
-            </p>
-          </md-card-content>
-        <md-card-actions>
-          <button md-mini-fab>
-            <md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
-          </button>
-          <button md-raised-button color="accent">Share</button>
-        </md-card-actions>
-      </md-card>
-  </md-grid-tile>
-  <md-grid-tile>2</md-grid-tile>
-  <md-grid-tile>3</md-grid-tile>
-  <md-grid-tile>4</md-grid-tile>
-</md-grid-list>
--->
 <!--Card-->
-<div class="container-fluid" *ngFor="let numbers of myList; let i=index" >
+<div class="container-fluid" *ngFor="let numbers of myList; let i=index" style="margin-top: 87px;">
   <div class="row">
     <div class="col-md-4"><md-card class="example-card">
       <md-card-header>
-        <div md-card-avatar class="example-header-image"></div>
+        <div md-card-avatar class="example-header-image" ></div>
         <md-card-title>{{numbers.title}}</md-card-title>
         <md-card-subtitle>{{numbers.subtitle}}</md-card-subtitle>
       </md-card-header>
-      <img md-card-image src="../../assets/Images/surya.jpg" alt="Photo of a Shiba Inu">
+      <img md-card-image src="../../assets/Images/{{numbers.img}}" alt="Photo of a Shiba Inu">
       <md-card-content>
         <p>
           {{numbers.para}}
@@ -49,72 +21,6 @@
       </md-card-actions>
     </md-card>
     </div>
-    <!--<div class="col-sm-3">
-      <div class="col-sm-3"><md-card class="example-card">
-        <md-card-header>
-          <div md-card-avatar class="example-header-image"></div>
-          <md-card-title>Shiba Inu</md-card-title>
-          <md-card-subtitle>Dog Breed</md-card-subtitle>
-        </md-card-header>
-        <img md-card-image src="../../assets/Images/surya.jpg" alt="Photo of a Shiba Inu">
-        <md-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-        </md-card-actions>
-      </md-card>
-      </div>
-
-    </div>
-    <div class="col-sm-3">
-      <div class="col-sm-3"><md-card class="example-card">
-        <md-card-header>
-          <div md-card-avatar class="example-header-image"></div>
-          <md-card-title>Shiba Inu</md-card-title>
-          <md-card-subtitle>Dog Breed</md-card-subtitle>
-        </md-card-header>
-        <img md-card-image src="../../assets/Images/surya.jpg" alt="Photo of a Shiba Inu">
-        <md-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-        </md-card-actions>
-      </md-card>
-      </div>
-    </div>
-    <div class="col-sm-3">
-      <div class="col-sm-3"><md-card class="example-card">
-        <md-card-header>
-          <div md-card-avatar class="example-header-image"></div>
-          <md-card-title>Shiba Inu</md-card-title>
-          <md-card-subtitle>Dog Breed</md-card-subtitle>
-        </md-card-header>
-        <img md-card-image src="../../assets/Images/surya.jpg" alt="Photo of a Shiba Inu">
-        <md-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </md-card-content>
-        <md-card-actions>
-          <button md-button>LIKE</button>
-          <button md-button>SHARE</button>
-        </md-card-actions>
-      </md-card>
-      </div>
-    </div>-->
   </div>
 </div>
+
