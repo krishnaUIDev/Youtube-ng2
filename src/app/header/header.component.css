@@ -1,11 +1,14 @@
 md-grid-tile {
   background: lightblue;
 }
-.example-card {
-  width: 400px;
-}
+
 
 .example-header-image {
   background-image: url('../../assets/Images/surya.jpg');
   background-size: cover;
+}
+.example-card{
+
+  width: 350px;
+
 }
