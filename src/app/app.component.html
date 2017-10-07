@@ -6,7 +6,8 @@
     </div>-->
     <a routerLink="home"><button md-raised-button color="warn" mdTooltip="YouTube Home"><i class="fa fa-youtube-play"  aria-hidden="true"></i>
       Youtube</button></a>
-    <p><span><input  class="form-control col-xs-4" type="text" placeholder="Search.."/></span></p>
+    <p><span><input  class="form-control col-xs-4" type="text" placeholder="Search.."
+    [(ngModel)]="term"/></span></p>
 
     <a routerLink="login" style="float: right" ><button md-raised-button color="warn">SIGN IN</button></a>
     <p style="float: right">

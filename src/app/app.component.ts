@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
+import {HeaderComponent} from './header/header.component';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

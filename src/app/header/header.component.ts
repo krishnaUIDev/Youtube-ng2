@@ -3,10 +3,12 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
 import { Header} from '../header';
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+
 })
 export class HeaderComponent implements OnInit {
 

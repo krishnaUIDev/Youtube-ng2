@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {RouterModule, Routes} from "@angular/router";
-
+import { FormsModule } from '@angular/forms';
 
 import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule
@@ -14,6 +14,7 @@ import { HeaderComponent } from './header/header.component';
 import { SearchPipe } from './search.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
+
 const appRoute: Routes = [
   {path:'home',component: HeaderComponent},
   {path:'login', component:LoginComponent},
@@ -28,10 +29,11 @@ const appRoute: Routes = [
     HeaderComponent,
     SearchPipe,
     SidebarComponent,
-    LoginComponent
+    LoginComponent,
+
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute),
+    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute),FormsModule,
     MdButtonModule,
     MdCardModule,
     MdMenuModule,
