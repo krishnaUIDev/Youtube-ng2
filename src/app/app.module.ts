@@ -2,27 +2,36 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
+import {RouterModule, Routes} from "@angular/router";
+
 
 import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule
 ,MatTooltipModule,MatSlideToggleModule,MatCardModule,MatGridListModule,MatSidenavModule,MatFormFieldModule,
   MatDialogModule} from "@angular/material";
-import { NavbarComponent } from './navbar/navbar.component';
 import {MatIconModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { SearchPipe } from './search.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { LoginComponent } from './login/login.component';
+const appRoute: Routes = [
+  {path:'home',component: HeaderComponent},
+  {path:'login', component:LoginComponent},
+  {path:'', redirectTo:'/home', pathMatch:'full'}
+
+
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     HeaderComponent,
     SearchPipe,
-    SidebarComponent
+    SidebarComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,HttpModule,
+    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute),
     MdButtonModule,
     MdCardModule,
     MdMenuModule,

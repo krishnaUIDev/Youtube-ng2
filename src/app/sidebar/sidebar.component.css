@@ -7,7 +7,13 @@ ul {
 
 li{
   display: block;
+ margin-bottom: 10px;
+}
+button, hr{
 
-  margin-bottom: 10px;
+  width: 124px;
 
+}
+button:hover {
+  transform: skew(-10deg);
 }

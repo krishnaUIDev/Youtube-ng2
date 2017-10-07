@@ -1,3 +1,92 @@
-<app-navbar></app-navbar>
 
+<!--<md-sidenav-container class="example-container">-->
+  <div class="navbar">
+   <!-- <div class="example-sidenav-content">
+      <p><button type="button" md-button (click)="sidenav.open()"><md-icon>menu</md-icon></button> </p>
+    </div>-->
+    <a routerLink="home"><button md-raised-button color="warn" mdTooltip="YouTube Home"><i class="fa fa-youtube-play"  aria-hidden="true"></i>
+      Youtube</button></a>
+    <p><span><input  class="form-control col-xs-4" type="text" placeholder="Search.."/></span></p>
 
+    <a routerLink="login" style="float: right" ><button md-raised-button color="warn">SIGN IN</button></a>
+    <p style="float: right">
+      <button md-icon-button [mdMenuTriggerFor]="menu">
+        <md-icon mdTooltip="Settings">more_vert</md-icon>
+      </button>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item [mdMenuTriggerFor]="DarkTheme">
+          <md-icon><i class="fa fa-moon-o" aria-hidden="true"></i></md-icon>
+          <span>Dark Theme</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-cog" aria-hidden="true"></i></md-icon>
+          <span>Settings</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-info-circle" aria-hidden="true"></i></md-icon>
+          <span>Help</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-commenting-o" aria-hidden="true"></i></md-icon>
+          <span>Feedback</span>
+        </button>
+        <hr/>
+        <button md-menu-item [mdMenuTriggerFor]="Language">Language</button>
+        <button md-menu-item [mdMenuTriggerFor]="Content">Content Location</button>
+        <button md-menu-item [mdMenuTriggerFor]="Restrict">Restrict Mode</button>
+        <button md-menu-item>Restore Old Youtube</button>
+      </md-menu>
+      <md-menu #DarkTheme="mdMenu">
+        <span md-menu-item><md-slide-toggle>Activate DarkTheme</md-slide-toggle> </span>
+      </md-menu>
+      <md-menu #Language="mdMenu">
+        <button md-menu-item>Choose you Language</button>
+      </md-menu>
+      <md-menu #Content="mdMenu">
+        <button md-menu-item>Choose location</button>
+      </md-menu>
+      <md-menu #Restrict="mdMenu">
+        <button md-menu-item>Restrict mode</button>
+      </md-menu>
+    </p>
+    <p style="float: right">
+      <button md-button [mdMenuTriggerFor]="appMenu"><md-icon mdTooltip="YouTube Apps" >apps</md-icon></button>
+      <md-menu #appMenu="mdMenu">
+        <button md-menu-item>
+          <md-icon><i class="fa fa-television" aria-hidden="true"></i></md-icon>
+          <span>YouTube TV</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-gamepad" aria-hidden="true"></i></md-icon>
+          <span>YouTube Gaming</span>
+        </button>
+        <hr/>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-music" aria-hidden="true"></i></md-icon>
+          <span>YouTube Music</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-male" aria-hidden="true"></i></md-icon>
+          <span>YouTube Kids</span>
+        </button>
+        <button md-menu-item>
+          <md-icon><i class="fa fa-graduation-cap" aria-hidden="true"></i></md-icon>
+          <span>YouTube Acadamy</span>
+        </button>
+      </md-menu>
+    </p>
+    <a href="#" style="float: right">
+      <md-icon mdTooltip="Upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i></md-icon>
+    </a>
+  </div>
+  <!--header tag-->
+  <!--<app-header></app-header>-->
+
+  <!--<md-sidenav #sidenav class="example-sidenav">
+    &lt;!&ndash;sidebar tag&ndash;&gt;
+    <app-sidebar></app-sidebar>
+  </md-sidenav>-->
+
+<!--</md-sidenav-container>-->
+
+<router-outlet></router-outlet>
