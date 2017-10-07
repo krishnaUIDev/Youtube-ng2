@@ -1,13 +1,12 @@
 <!--Card-->
-<div class="container-fluid" *ngFor="let numbers of myList; let i=index" style="margin-top: 87px;">
-  <div class="row">
-    <div class="col-md-4"><md-card class="example-card">
+<div class="container-fluid col-sm-3" *ngFor="let numbers of myList; let i=index" style="margin-top: 99px;">
+    <div ><md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image" ></div>
         <md-card-title>{{numbers.title}}</md-card-title>
         <md-card-subtitle>{{numbers.subtitle}}</md-card-subtitle>
       </md-card-header>
-      <img md-card-image src="../../assets/Images/{{numbers.img}}" alt="Photo of a Shiba Inu">
+      <img md-card-image src="../../assets/Images/{{numbers.img}}" class="np1">
       <md-card-content>
         <p>
           {{numbers.para}}
@@ -21,6 +20,6 @@
       </md-card-actions>
     </md-card>
     </div>
-  </div>
 </div>
+
 

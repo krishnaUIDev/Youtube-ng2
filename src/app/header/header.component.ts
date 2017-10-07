@@ -11,7 +11,7 @@ import { Header} from '../header';
 
 })
 export class HeaderComponent implements OnInit {
-
+  isDarkTheme: boolean = false;
   //list:any[];
   myList: Header[];
 
