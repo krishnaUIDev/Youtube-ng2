@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
-
+import { Header} from '../header';
 
 @Component({
   selector: 'app-header',
@@ -11,15 +11,13 @@ import 'rxjs/add/operator/map'
 export class HeaderComponent implements OnInit {
 
   //list:any[];
-  myList: Array<any>;
+  myList: Header[];
 
   constructor(private _http:Http, ) {
 
     this._http.get('../assets/json/list.json')
       .map(response => response.json())
       .subscribe(res => this.myList = res);
-
-
   }
 
 
