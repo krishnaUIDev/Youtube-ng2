@@ -3,6 +3,7 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
 import {DataService} from '../services/data.service';
 import { Header} from '../header';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
   error: string;
 
   constructor(private http:Http,
-              private dataService: DataService) {
+              private dataService: DataService,
+              private router: Router) {
   }
 
 
@@ -31,4 +33,8 @@ export class HeaderComponent implements OnInit {
         error=>this.error = error.statusText);
   }
 
+  preventNormal(event:MouseEvent){
+    this.router.navigate(['./surya'])
+
+  }
 }

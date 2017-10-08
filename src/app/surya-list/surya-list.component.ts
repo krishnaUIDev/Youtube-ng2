@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from '../services/data.service';
+//import {DataService} from '../services/data.service';
 import {Http} from '@angular/http';
-import { Header} from '../header';
+//import { Header} from '../header';
+
+
 
 @Component({
   selector: 'app-surya-list',
@@ -9,15 +11,29 @@ import { Header} from '../header';
   styleUrls: ['./surya-list.component.css']
 })
 export class SuryaListComponent implements OnInit {
-list: Header[];
+list:any[];
 error: string;
+  video:string;
 
-  constructor(private http:Http, private dataService: DataService) { }
+ /* videoList = [
+    {vlink:"https://www.youtube.com/embed/7dhKeHT2Bdk"}
+    ];
+*/
+
+  constructor(private _http:Http) { }
 
   ngOnInit() {
-    this.dataService.getAllData()
+    this._http.get('../assets/json/songs.json')
+      .map(res=>res.json())
       .subscribe(res => this.list = res,
         error=>this.error = error.statusText);
   }
+  /*getEmbedUrl(x){
+   /!* return 'https://www.youtube.com/embed/' + x.embed*!/
+    return 'https://www.youtube.com/embed/7dhKeHT2Bdk'
 
+  }*/
+  /*photoURL() {
+    return this.sanitizer.bypassSecurityTrustUrl('https://www.youtube.com/embed/7dhKeHT2Bdk');
+  }*/
 }

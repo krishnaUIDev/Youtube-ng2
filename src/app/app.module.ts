@@ -18,10 +18,11 @@ import { SuryaListComponent } from './surya-list/surya-list.component';
 
 import {DataService} from './services/data.service';
 
+
 const appRoute: Routes = [
   {path:'home',component: HeaderComponent},
   {path:'login', component:LoginComponent},
-  {path:'home/surya', component:SuryaListComponent},
+  {path:'surya', component:SuryaListComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 

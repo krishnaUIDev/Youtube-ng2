@@ -17,8 +17,9 @@
           <md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
         </button>
         <button md-raised-button color="accent">Like</button>
-        <a routerLink="surya"> <button md-raised-button>Watch full Videos</button></a>
+   <!--  <a routerLink="surya"><button md-raised-button >Watch full Videos</button></a>-->
 
+        <button md-raised-button (click)="preventNormal($event)" >Watch full Videos</button>
       </md-card-actions>
     </md-card>
 
