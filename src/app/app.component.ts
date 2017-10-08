@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
 import {HeaderComponent} from './header/header.component';
 @Component({
@@ -8,7 +7,7 @@ import {HeaderComponent} from './header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
+  theme ="my-theme";
    constructor(){
 
    }

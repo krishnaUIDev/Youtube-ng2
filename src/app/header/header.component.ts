@@ -3,7 +3,6 @@ import {Http} from '@angular/http';
 import 'rxjs/add/operator/map'
 import { Header} from '../header';
 
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -21,7 +20,6 @@ export class HeaderComponent implements OnInit {
       .map(response => response.json())
       .subscribe(res => this.myList = res);
   }
-
 
   ngOnInit() {
   }
