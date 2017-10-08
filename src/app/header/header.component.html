@@ -1,6 +1,6 @@
 <!--Card-->
 <div class="container-fluid col-sm-3" *ngFor="let numbers of myList; let i=index" style="margin-top: 99px;">
-    <div ><md-card class="example-card">
+    <md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image" ></div>
         <md-card-title>{{numbers.title}}</md-card-title>
@@ -16,12 +16,12 @@
         <button md-mini-fab>
           <md-icon class="md-24" aria-label="Example icon-button with a heart icon">favorite</md-icon>
         </button>
-        <button md-raised-button color="accent">Share</button>
+        <button md-raised-button color="accent">Like</button>
         <a routerLink="surya"> <button md-raised-button>Watch full Videos</button></a>
 
       </md-card-actions>
     </md-card>
-    </div>
+
 </div>
 
 

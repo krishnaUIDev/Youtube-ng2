@@ -7,7 +7,7 @@ import {HeaderComponent} from './header/header.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  theme ="my-theme";
+
    constructor(){
 
    }

@@ -16,6 +16,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
 import { SuryaListComponent } from './surya-list/surya-list.component';
 
+import {DataService} from './services/data.service';
+
 const appRoute: Routes = [
   {path:'home',component: HeaderComponent},
   {path:'login', component:LoginComponent},
@@ -52,7 +54,7 @@ const appRoute: Routes = [
     MatFormFieldModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
