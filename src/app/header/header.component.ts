@@ -18,7 +18,7 @@ export class HeaderComponent implements OnInit {
               private dataService: DataService) {
   }
 
-  
+
   ngOnInit() {
 
    /* this.http.get('../assets/json/list.json')

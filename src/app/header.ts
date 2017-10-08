@@ -3,4 +3,5 @@ export interface Header {
   subtitle: string;
   img: string;
   para: string;
+  name: string;
 }
