@@ -4,7 +4,6 @@ import {Http} from '@angular/http';
 //import { Header} from '../header';
 
 
-
 @Component({
   selector: 'app-surya-list',
   templateUrl: './surya-list.component.html',
