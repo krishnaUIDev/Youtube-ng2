@@ -14,10 +14,12 @@ import { HeaderComponent } from './header/header.component';
 import { SearchPipe } from './search.pipe';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { LoginComponent } from './login/login.component';
+import { SuryaListComponent } from './surya-list/surya-list.component';
 
 const appRoute: Routes = [
   {path:'home',component: HeaderComponent},
   {path:'login', component:LoginComponent},
+  {path:'home/surya', component:SuryaListComponent},
   {path:'', redirectTo:'/home', pathMatch:'full'}
 
 
@@ -30,10 +32,11 @@ const appRoute: Routes = [
     SearchPipe,
     SidebarComponent,
     LoginComponent,
+    SuryaListComponent,
 
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute),FormsModule,
+    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute,{useHash: true}),FormsModule,
     MdButtonModule,
     MdCardModule,
     MdMenuModule,
