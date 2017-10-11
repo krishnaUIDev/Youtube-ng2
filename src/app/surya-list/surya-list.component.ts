@@ -24,7 +24,7 @@ error: string;
   ngOnInit() {
     this._http.get('../assets/json/songs.json')
       .map(res=>res.json())
-      .subscribe(res => this.list = res,
+      .subscribe(response => this.list = response,
         error=>this.error = error.statusText);
   }
   /*getEmbedUrl(x){
