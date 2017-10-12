@@ -1,7 +1,7 @@
 <div style="width: 100%;margin-top: 100px;" *ngFor="let x of list;let i=index">
   <div class="col-sm-6 text-center" >
     <md-card style="width: 248px;">{{x.SongName}}</md-card>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/7dhKeHT2Bdk" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" [src]="getEmbedUrl(x)" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //import {DataService} from '../services/data.service';
 import {Http} from '@angular/http';
 //import { Header} from '../header';
+import {DomSanitizer} from "@angular/platform-browser";
 
 
 @Component({
@@ -19,7 +20,7 @@ error: string;
     ];
 */
 
-  constructor(private _http:Http) { }
+  constructor(private _http:Http, private sanitizer:DomSanitizer) { }
 
   ngOnInit() {
     this._http.get('../assets/json/songs.json')
@@ -27,12 +28,10 @@ error: string;
       .subscribe(response => this.list = response,
         error=>this.error = error.statusText);
   }
-  /*getEmbedUrl(x){
-   /!* return 'https://www.youtube.com/embed/' + x.embed*!/
-    return 'https://www.youtube.com/embed/7dhKeHT2Bdk'
 
-  }*/
-  /*photoURL() {
-    return this.sanitizer.bypassSecurityTrustUrl('https://www.youtube.com/embed/7dhKeHT2Bdk');
-  }*/
+  getEmbedUrl(x){
+    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + x.embed)
+
+}
+
 }
