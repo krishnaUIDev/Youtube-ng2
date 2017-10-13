@@ -1,13 +1,15 @@
 <!--Card-->
-<div class="container-fluid col-sm-3" *ngFor="let numbers of myList; let i=index" style="margin-top: 99px;">
+
+<div class="col-sm-3" *ngFor="let numbers of myList; let i=index" style="margin-top: 99px;">
+  <div class="thumbnail">
     <md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image" ></div>
         <md-card-title>{{numbers.title}}</md-card-title>
-        <md-card-subtitle>{{numbers.subtitle}}</md-card-subtitle>  <p id="inc"></p>
-      </md-card-header>
+        <md-card-subtitle>{{numbers.subtitle}}</md-card-subtitle>
+      </md-card-header><hr/>
       <img md-card-image src="../../assets/Images/{{numbers.img}}" class="np1">
-      <md-card-content>
+      <md-card-content><hr/>
         <p>
           {{numbers.para}}
         </p>
@@ -21,6 +23,10 @@
         <button md-raised-button (click)="preventNormal($event)" >Watch full Videos</button>
       </md-card-actions>
     </md-card>
+  </div>
 </div>
 
+<footer class="text-center">
 
+  &copy; YouTube
+</footer>
