@@ -30,7 +30,7 @@ error: string;
   }
 
   getEmbedUrl(x){
-    return this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + x.embed)
+    return 'https://www.youtube.com/embed/' + x.embed
 
 }
 
