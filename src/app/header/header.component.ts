@@ -19,8 +19,6 @@ export class HeaderComponent implements OnInit {
               private dataService: DataService,
               private router: Router) {
   }
-
-
   ngOnInit() {
 
    /* this.http.get('../assets/json/list.json')
@@ -36,5 +34,10 @@ export class HeaderComponent implements OnInit {
   preventNormal(event:MouseEvent){
     this.router.navigate(['./surya'])
 
+  }
+
+  increse(){
+
+    
   }
 }
