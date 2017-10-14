@@ -15,11 +15,6 @@ list:any[];
 error: string;
   video:string;
 
- /* videoList = [
-    {vlink:"https://www.youtube.com/embed/7dhKeHT2Bdk"}
-    ];
-*/
-
   constructor(private _http:Http, private sanitizer:DomSanitizer) { }
 
   ngOnInit() {
@@ -31,7 +26,6 @@ error: string;
 
   getEmbedUrl(x){
     return 'https://www.youtube.com/embed/' + x.embed
-
-}
+  }
 
 }
