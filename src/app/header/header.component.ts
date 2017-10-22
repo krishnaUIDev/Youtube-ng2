@@ -37,7 +37,8 @@ export class HeaderComponent implements OnInit {
   }
 
   increse(){
-
+    //let i = 0;
+   //document.getElementById("ha").hak = ++i;
 
   }
 }
