@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
 
   }
   prevNormal(event: MouseEvent) {
-    this.router.navigate(['./weather']);
+    this.router.navigate(['./WeatherCheck']);
   }
   increse() {
     // let i = 0;

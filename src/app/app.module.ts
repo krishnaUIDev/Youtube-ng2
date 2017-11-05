@@ -18,14 +18,14 @@ import { LoginComponent } from './login/login.component';
 import { SuryaListComponent } from './surya-list/surya-list.component';
 
 import {DataService} from './services/data.service';
-import { WeatherComponent } from './weather/weather.component';
+import { WeatherCheckComponent } from './weather-check/weather-check.component';
 
 
 const appRoute: Routes = [
   {path: 'home', component: HeaderComponent},
-  {path: 'weather', component: WeatherComponent},
   {path: 'login', component: LoginComponent},
   {path: 'surya', component: SuryaListComponent},
+  {path: 'WeatherCheck', component: WeatherCheckComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 
 
@@ -38,7 +38,7 @@ const appRoute: Routes = [
     SearchPipe,
     LoginComponent,
     SuryaListComponent,
-    WeatherComponent,
+    WeatherCheckComponent,
 
   ],
   imports: [
