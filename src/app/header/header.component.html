@@ -1,7 +1,7 @@
 <!--Card-->
 
 <div class="col-sm-3" *ngFor="let numbers of myList; let i=index" style="margin-top: 99px;">
-  <div class="thumbnail">
+
     <md-card class="example-card">
       <md-card-header>
         <div md-card-avatar class="example-header-image" ></div>
@@ -23,7 +23,7 @@
         <button md-raised-button (click)="preventNormal($event)" >Watch full Videos</button>
       </md-card-actions>
     </md-card>
-  </div>
+
 </div>
 <button md-raised-button color="warn" (click)="prevNormal($event)">Weather</button>
 <footer class="text-center">

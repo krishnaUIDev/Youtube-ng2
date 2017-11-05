@@ -12,13 +12,14 @@ import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModul
 import {MatInputModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
+import { WeatherCheckComponent } from './weather-check/weather-check.component';
 import { SearchPipe } from './search.pipe';
 
 import { LoginComponent } from './login/login.component';
 import { SuryaListComponent } from './surya-list/surya-list.component';
 
 import {DataService} from './services/data.service';
-import { WeatherCheckComponent } from './weather-check/weather-check.component';
+
 
 
 const appRoute: Routes = [
