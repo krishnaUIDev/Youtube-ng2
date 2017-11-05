@@ -2,28 +2,31 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import {RouterModule, Routes} from "@angular/router";
+import {RouterModule, Routes} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import {BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,MatMenuModule
-,MatTooltipModule,MatSlideToggleModule,MatCardModule,MatGridListModule,MatSidenavModule,MatFormFieldModule,
-  MatDialogModule} from "@angular/material";
+import {BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MatMenuModule
+, MatTooltipModule, MatSlideToggleModule, MatCardModule, MatGridListModule, MatSidenavModule, MatFormFieldModule,
+  MatDialogModule} from '@angular/material';
+import {MatInputModule} from '@angular/material';
 import {MatIconModule} from '@angular/material';
 import { HeaderComponent } from './header/header.component';
 import { SearchPipe } from './search.pipe';
-import { SidebarComponent } from './sidebar/sidebar.component';
+
 import { LoginComponent } from './login/login.component';
 import { SuryaListComponent } from './surya-list/surya-list.component';
 
 import {DataService} from './services/data.service';
+import { WeatherComponent } from './weather/weather.component';
 
 
 const appRoute: Routes = [
-  {path:'home',component: HeaderComponent},
-  {path:'login', component:LoginComponent},
-  {path:'surya', component:SuryaListComponent},
-  {path:'', redirectTo:'/home', pathMatch:'full'}
+  {path: 'home', component: HeaderComponent},
+  {path: 'weather', component: WeatherComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'surya', component: SuryaListComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'}
 
 
 ];
@@ -33,14 +36,15 @@ const appRoute: Routes = [
     AppComponent,
     HeaderComponent,
     SearchPipe,
-    SidebarComponent,
     LoginComponent,
     SuryaListComponent,
+    WeatherComponent,
 
   ],
   imports: [
-    BrowserModule,BrowserAnimationsModule,HttpModule,RouterModule.forRoot(appRoute,{useHash: true}),FormsModule,
+    BrowserModule, BrowserAnimationsModule, HttpModule, RouterModule.forRoot(appRoute, {useHash: true}), FormsModule,
     MdButtonModule,
+    MatInputModule,
     MdCardModule,
     MdMenuModule,
     MdToolbarModule,

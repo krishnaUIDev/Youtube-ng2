@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import {DataService} from '../services/data.service';
+// import {DataService} from '../services/data.service';
 import {Http} from '@angular/http';
-//import { Header} from '../header';
-import {DomSanitizer} from "@angular/platform-browser";
+// import { Header} from '../header';
+import {DomSanitizer} from '@angular/platform-browser';
 
 
 @Component({
@@ -11,20 +11,20 @@ import {DomSanitizer} from "@angular/platform-browser";
   styleUrls: ['./surya-list.component.css']
 })
 export class SuryaListComponent implements OnInit {
-list:any[];
+list: any[];
 error: string;
-  video:string;
+  video: string;
 
-  constructor(private _http:Http, private sanitizer:DomSanitizer) { }
+  constructor(private _http: Http, private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
     this._http.get('../assets/json/songs.json')
-      .map(res=>res.json())
+      .map(res => res.json())
       .subscribe(response => this.list = response,
-        error=>this.error = error.statusText);
+        error => this.error = error.statusText);
   }
 
-  getEmbedUrl(x){
+  getEmbedUrl(x) {
     return 'https://www.youtube.com/embed/' + x.embed
   }
 
